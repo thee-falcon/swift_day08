@@ -16,7 +16,7 @@ func    checkPassord(_ passowrd: String) throws -> String {
     }
 }
 
-let stringPass = "12"
+let stringPass = "0123"
 
 do {
     let result = try checkPassord(stringPass)
@@ -26,5 +26,6 @@ do {
 } catch passwordError.obvious {
     print("I have the same combination on my luggage!")
 } catch {
-    print("There was an Error!")
+    // error.localizedDescription to see exactly what happened.
+    print("There was an Error: \(error.localizedDescription)")
 }
